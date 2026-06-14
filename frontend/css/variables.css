@@ -1,0 +1,23 @@
+/*==== VARIABLES GLOBALES ==== */
+:root {
+    --orange: #f4631E;
+    --orange-light: #FF8C50;
+    --dark: #0A0A0A;
+    --dark-2: #111111;
+    --dark-3: #141414;
+    --white: #FFFFFF;
+    --gray: #888888;
+   --border: #1E1E1E;
+   --green: #1A8A4A;
+   --blue: #2471A3;
+   --red: #C0392B; 
+   --font: Arial, sans-serif;
+   --radius: 10px;
+   --radius-lg: 16px;
+   --shadow: 0 2px rgba(0,0,0,0.1);
+}
+
+
+
+    
+
