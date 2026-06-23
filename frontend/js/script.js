@@ -60,3 +60,30 @@ cats.forEach(cat => {
         });
     });
 });
+
+
+
+
+
+
+
+
+const commandes = [];
+
+// Pour plus tard : ajout dynamique des commandes
+function afficherCommandes() {
+    const container = document.getElementById("orders-container");
+
+    if (commandes.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">📦</div>
+                <h2>Aucune commande</h2>
+                <p>Vos commandes apparaîtront ici.</p>
+            </div>
+        `;
+    }
+}
+
+afficherCommandes();
+
