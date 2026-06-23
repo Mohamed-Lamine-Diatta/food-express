@@ -1,0 +1,4 @@
+# Copie ce fichier en .env — NE JAMAIS commiter .env sur GitHub
+JWT_SECRET=food-express-secret-change-this-in-production
+PORT=8000
+NODE_ENV=development
