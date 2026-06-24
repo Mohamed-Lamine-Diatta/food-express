@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="FR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale1.0">
+
+<style>
+
+body{
+    background: #0A0A0A;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container{
+    max-width: 420px;
+    margin: auto;
+}
+
+h1{
+    margin-bottom: 5px;
+}
+
+.subtitle{
+    color: #888;
+    margin-bottom: 25px;
+}
+.steps{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.step{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.done .circle{
+    background: #22c55e;
+}
+
+.active .circle{
+    background: #ff7a2f;
+}
+
+.pending .circle{
+    background: #222;
+    color: #999;
+}
+
+.done{
+    color: #22c55e;
+}
+
+.active{
+    color: #ff7a2f;
+}
+
+.pending{
+    color: #777;
+}
+
+.cart-item{
+    background: #111;
+    border-radius: 18px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.image{
+    width: 55px;
+    height: 55px;
+    background: #1d1d1d;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: bold;
+}
+.price{
+    color: #ff7a2f;
+    font-weight: bold;
+}
+
+.qty{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.qty button{
+    width: 35px;
+    height: 35px;
+    background: #1f1f1f;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.summary{
+    background: #111;
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    color: #888;
+}
+
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.total-price{
+    color: #ff7a2f;
+    font-size: 30px;
+}
+.confirm{
+    width: 100%;
+    padding: 18px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    background: #ff7a2f;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255,122,47,0.4);
+}
+
+</style>
+</head>
+
+<body>
+<div class="container">
+<h1>🛒 Mon Panier</h1>
+<p class="subtitle">
+verifier votre commande avant de valider
+</p>
+
+<div class="steps">
+
+<div class="step done">
+<div class="circle">✔</div>
+MENU
+</div>
+
+<div class="step active">
+<div class="circle">2</div>
+Panier
+</div>
+
+<div class="step pending">
+<div class="circle">3</div>
+confirmation
+</div>
+
+</div>
+
+<div class="cart-item">
+
+<div class="left">
+<div class="image">🍛</div>
+
+<div>
+<div class="name">thieboudienne</div>
+<div class="price">2 500 FCFA</div>
+</div>
+
+</div>
+
+<div class="qty">
+<button>-</button>
+<span>1</span>
+<button>+</button>
+</div>
+
+</div>
+
+<div class="cart-item">
+
+<div class="left">
+
+<div class="image">🍗</div>
+
+<div>
+<div class="name">yassa poulet</div>
+<div class="price">4 000 FCFA</div>
+</div>
+
+</div>
+
+<div class="qty">
+<button>-</button>
+<span>2</span>
+<button>+</button>
+</div>
+
+</div>
+
+<div class="cart-item">
+
+<div class="left">
+
+<div class="image">🥤</div>
+
+<div>
+<div class="name">Bissap frais</div>
+<div class="price">500 FCFA</div>
+</div>
+
+</div>
+
+<div class="qty">
+<button>-</button>
+<span>1</span>
+<button>+</button>
+</div>
+
+</div>
+
+
+<div class="summary">
+
+<div class="row">
+<span>sous-total</span>
+<span>7 000 FCFA</span>
+</div>
+
+<div class="row">
+<span>frais de service</span>
+<span>200 FCFA</span>
+</div>
+
+<hr style="border:1px solid #222;">
+
+<div class="total">
+<span>total</span>
+<span class="total-price">7 200 FCFA</span>
+</div>
+
+</div>
+<button class="confirm">
+✔CONFIRMER LA commande
+</button>
+
+</div>
+
+</body>
+</html>
+
+
