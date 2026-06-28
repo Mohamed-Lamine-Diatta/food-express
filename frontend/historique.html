@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Express - Historique</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>📋 Mes Commandes</h1>
+        <p>Suivez l'état de vos commandes en temps réel</p>
+    </div>
+
+    <div class="filters">
+        <button class="active">Toutes</button>
+        <button>✅ Livrées</button>
+        <button>🔄 En cours</button>
+        <button>⏳ En attente</button>
+    </div>
+
+    <!-- Aucune commande affichée -->
+    <div id="orders-container">
+        <div class="empty-state">
+            <div class="empty-icon">📦</div>
+            <h2>Aucune commande</h2>
+            <p>Vos commandes apparaîtront ici.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

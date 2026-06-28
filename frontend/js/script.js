@@ -60,3 +60,46 @@ cats.forEach(cat => {
         });
     });
 });
+
+
+
+
+
+
+
+
+const commandes = [];
+
+function afficherCommandes() {
+    const container = document.getElementById("orders-container");
+
+    if (commandes.length === 0) {
+        container.innerHTML = `
+            <div class="empty-state">
+                <div class="empty-icon">📦</div>
+                <h2>Aucune commande</h2>
+                <p>Vos commandes apparaîtront ici.</p>
+            </div>
+        `;
+    }
+}
+
+afficherCommandes();
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnHistorique = document.getElementById("btnHistorique");
+
+    if (btnHistorique) {
+        btnHistorique.addEventListener("click", () => {
+            window.location.href = "historique.html";
+        });
+    }
+
+});
