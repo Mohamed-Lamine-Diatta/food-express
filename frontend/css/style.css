@@ -599,3 +599,68 @@ body{
 .empty-state p{
     color:#8a8a8a;
 }
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#0A0A0A;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.confirmation-container{
+    width:100%;
+    max-width:400px;
+    background:#141414;
+    border:1px solid #1E1E1E;
+    border-radius:20px;
+    padding:40px 25px;
+    text-align:center;
+}
+
+.success-icon{
+    font-size:80px;
+    margin-bottom:20px;
+}
+
+h1{
+    color:white;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+p{
+    color:#888;
+    line-height:1.6;
+    margin-bottom:30px;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(135deg,#F4631E,#FF8C50);
+    color:white;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+}

@@ -70,7 +70,6 @@ cats.forEach(cat => {
 
 const commandes = [];
 
-// Pour plus tard : ajout dynamique des commandes
 function afficherCommandes() {
     const container = document.getElementById("orders-container");
 
@@ -87,3 +86,20 @@ function afficherCommandes() {
 
 afficherCommandes();
 
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const btnHistorique = document.getElementById("btnHistorique");
+
+    if (btnHistorique) {
+        btnHistorique.addEventListener("click", () => {
+            window.location.href = "historique.html";
+        });
+    }
+
+});
