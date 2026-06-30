@@ -1,0 +1,20 @@
+/* F5 - Menu + Admin commandes */
+.menu-hero { padding: 34px 0 28px; }
+.menu-hero-grid { display: flex; align-items: center; gap: 18px; }
+.menu-rest-emoji { width: 86px; height: 86px; border-radius: 22px; display: grid; place-items: center; font-size: 46px; background: rgba(244,99,30,.14); border: 1px solid rgba(244,99,30,.30); }
+.menu-hero h1 { font-size: clamp(32px, 5vw, 50px); margin: 10px 0 4px; }
+.menu-hero p { color: var(--gray); }
+.menu-content { padding: 24px 0 55px; }
+.menu-filters { margin-bottom: 20px; }
+.menu-list { display: grid; gap: 12px; }
+.dish-card { display: grid; grid-template-columns: 74px 1fr auto; gap: 14px; align-items: center; padding: 14px; }
+.dish-emoji { width: 70px; height: 70px; border-radius: 17px; display: grid; place-items: center; background: var(--dark-4); font-size: 36px; }
+.dish-name { font-weight: 900; font-size: 16px; }
+.dish-desc { color: var(--gray); font-size: 13px; margin: 4px 0 8px; }
+.dish-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+.dish-tags span { background: #1f1f1f; color: #aaa; border-radius: 7px; padding: 3px 7px; font-size: 11px; }
+.dish-side { text-align: right; }
+.add-btn { width: 38px; height: 38px; border: 0; border-radius: 12px; color: white; background: linear-gradient(135deg, var(--orange), var(--orange-light)); font-size: 22px; font-weight: 900; margin-top: 9px; }
+.admin-order-filters { margin-bottom: 18px; }
+.status-select { background: #1a1a1a; color: white; border: 1px solid var(--border); border-radius: 9px; padding: 8px; }
+@media (max-width: 700px) { .dish-card { grid-template-columns: 58px 1fr; } .dish-emoji { width: 58px; height: 58px; font-size: 30px; } .dish-side { grid-column: 1 / -1; text-align: left; display: flex; align-items: center; justify-content: space-between; } }
