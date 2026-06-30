@@ -1,106 +1,242 @@
 <!DOCTYPE html>
-<html lang="fr"
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="Viewport" content="width=device-width, initial-scal1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Express - Restaurants</title>
+
     <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dieyla.css">
 </head>
+
 <body>
+
+    <!-- Navigation -->
+
     <nav class="navbar">
-        <a href="index.html" class="logo">
-            <div class="logo-icon">🍽️</div>
-            <span class="logo-name">Food Express</span>
-        </a>
-        <ul class="nav-links">
-        </ul>
-        <div class="nav-btns">
+
+        <div class="container nav-inner">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-name">Food Express</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="restaurants.html" class="active">Restaurants</a></li>
+                <li><a href="historique.html">Commandes</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="connexion.html" class="btn-outline">Connexion</a>
+                <a href="panier.html" class="btn-fill">🛒 Panier</a>
+            </div>
+
         </div>
+
     </nav>
-    
-    <div class="rest-page">
 
-        <h1>Nos Restaurants</h1>
-        <p class="subtitle">Découvrez tous les restaurants disponibles.</p>
+    <main class="page">
 
-        <div class="rest-search">
-            <span>🔍</span>
-            <input type="text" placeholder="Rechercher...">
-        </div>
-    </div>
-    <div class="rest-pills">
-            <div class="pill active">🍽️ Tous</div>
-            <div class="pill">🍚 Traditionnel</div>
-            <div  class="pill">🍔 Fast-food</div>
-            <div class="pill">🐟 Poisson</div>
-            <div class="pill">🍕 Pizza</div>
-        </div>
-        
-        <div class="rest-grid">
-             <div class="rest-card">
-            <div class="rest-img">
-                🍛
-            <div class="rest-rating">⭐4.9</div>
-            </div>
-            <div class="rest-info">
-                <h3>Le Baobab</h3>
-                <p>  sénégalaise </p>
-                <div class="rest-foot">
-                    <span> 25min</span>
-                    <a href="menu.html" class="btn-fill">Voir</a>
+        <!-- En-tête -->
+
+        <section class="hero-section restaurants-hero">
+
+            <div class="container">
+
+                <span class="badge">
+                    🍽️ Sélection Food Express
+                </span>
+
+                <h1>Nos Restaurants</h1>
+
+                <p>
+                    Découvrez tous les restaurants disponibles
+                    et choisissez votre menu.
+                </p>
+
+                <div class="search-box restaurants-search">
+
+                    <span>🔍</span>
+
+                    <input
+                        type="text"
+                        id="restaurantSearch"
+                        placeholder="Rechercher un restaurant..."
+                    >
+
                 </div>
+
             </div>
-        </div>
-    <div class="rest-card">
-        <div class="rest-img">
-            🍔
-            <div class="rest-rating">⭐4.5</div>
+
+        </section>
+
+        <!-- Contenu -->
+
+        <section class="container restaurants-content">
+
+            <!-- Filtres -->
+
+            <div class="pills" id="restaurantFilters">
+
+                <button class="pill active" data-cat="tous">
+                    🍽️ Tous
+                </button>
+
+                <button class="pill" data-cat="traditionnel">
+                    🍚 Traditionnel
+                </button>
+
+                <button class="pill" data-cat="fast-food">
+                    🍔 Fast-food
+                </button>
+
+                <button class="pill" data-cat="poisson">
+                    🐟 Poisson
+                </button>
+
+                <button class="pill" data-cat="pizza">
+                    🍕 Pizza
+                </button>
+
             </div>
-        <div class="rest-info">
-            <h3>Dakar Burger</h3>
-            <p>🍔 Fast-food</p>
-            <div class="rest-foot">
-                <span> 15min</span>
-                <a href="menu.html" class="btn-fill">Voir</a>
+
+            <!-- Liste des restaurants -->
+
+            <div class="grid-2" id="restaurantsGrid">
+
+                <article class="food-card restaurant-card">
+
+                    <div class="food-img bg-baobab">
+                        🍛
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Le Baobab</h3>
+
+                        <p>🇸🇳 Cuisine sénégalaise • Plateau</p>
+
+                        <div class="card-foot">
+
+                            <span>⏱ 25-35 min</span>
+
+                            <a href="menu.html?restaurant=1"
+                               class="btn-fill">
+                                Voir
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="food-card restaurant-card">
+
+                    <div class="food-img bg-burger">
+                        🍔
+                        <span class="rating">⭐ 4.5</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Dakar Burger</h3>
+
+                        <p>🍔 Fast-food • Burgers & Frites</p>
+
+                        <div class="card-foot">
+
+                            <span>⏱ 15-25 min</span>
+
+                            <a href="menu.html?restaurant=2"
+                               class="btn-fill">
+                                Voir
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="food-card restaurant-card">
+
+                    <div class="food-img bg-fish">
+                        🐟
+                        <span class="rating">⭐ 4.7</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Chez Aminata</h3>
+
+                        <p>🐟 Poisson grillé • Yoff</p>
+
+                        <div class="card-foot">
+
+                            <span>⏱ 30-40 min</span>
+
+                            <a href="menu.html?restaurant=3"
+                               class="btn-fill">
+                                Voir
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <article class="food-card restaurant-card">
+
+                    <div class="food-img bg-pizza">
+                        🍕
+                        <span class="rating">⭐ 4.3</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3>Pizza Teranga</h3>
+
+                        <p>🍕 Pizzas maison • Almadies</p>
+
+                        <div class="card-foot">
+
+                            <span>⏱ 20-30 min</span>
+
+                            <a href="menu.html?restaurant=4"
+                               class="btn-fill">
+                                Voir
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
             </div>
-        </div>
-    </div>
-    <div class="rest-card">
-        <div class="rest-img">
-            🐟
-            <div class="rest-rating">⭐4.7</div>
+
+            <div class="empty" id="restaurantsEmpty" hidden>
+                Aucun restaurant trouvé.
             </div>
-        <div class="rest-info">
-            <h3>Chez Aminata</h3>
-            <p> 🐟Poisson</p>
-            <div class="rest-foot">
-                <span> 30min</span>
-                <a href="menu.html" class="btn-fill">Voir</a>
-            </div>
-        </div>
-    </div>
-    <div class="rest-card">
-        <div class="rest-img">
-            🍕
-            <div class="rest-rating">⭐4.3</div>
-            </div>
-        <div class="rest-info">
-            <h3> Pizza Teranga</h3>
-            <p> 🍕Pizza</p>
-            <div class="rest-foot">
-                <span> 20min</span>
-                <a href="menu.html" class="btn-fill">Voir</a>
-            </div>
-        </div>
-     </div>
-    </div>
-    </div>
+
+        </section>
+
+    </main>
+
     <footer class="footer">
-        <p>Copyright 2026 Food Express - Tous droits réservés</p>
+        Copyright © 2026 Food Express - Tous droits réservés
     </footer>
+
     <script src="js/api.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/dieyla.js"></script>
+
 </body>
 </html>
+
 

@@ -1,123 +1,277 @@
 <!DOCTYPE html>
-<html lang="fr"
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Express - Accueil</title>
+
     <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/dieyla.css">
 </head>
 <body>
+
+    <!-- Barre de navigation -->
     <nav class="navbar">
-        <a href="index.html" class="logo">
-            <div class="logo-icon">🍽️</div>
-             <span class="logo-name">Food Express</span> 
-        </a>
-        <ul class="nav-links">
-        </ul>
-        <div class="nav-btns">
-            <a href="connexion.html" class="btn-outline">Connexion</a>
-            <a href="connexion.html" class="btn-fill">S´inscrire</a>
+        <div class="container nav-inner">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">🍽️</span>
+                <span class="logo-name">Food Express</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Accueil</a></li>
+                <li><a href="restaurants.html">Restaurants</a></li>
+                <li><a href="historique.html">Commandes</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="connexion.html" class="btn-outline">Connexion</a>
+                <a href="restaurants.html" class="btn-fill">Commander</a>
+            </div>
+
         </div>
     </nav>
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-badge"> Livraison à Dakar</div>
-            <h1>Commander vos <span>plats<br> favoris</span> en ligne.</h1>
-            <p>Découvrez les meilleurs restaurants de Dakar. Rapide,<br> simple et délicieux.</p>
-            <div class="hero btns">
-                <a href="restaurants.html" class="btn-fill">🍽️ Commander</a>
-                <a href="restaurants.html" class="btn-outline">Voir les restos</a>
-            </div>
-        </div>
-    </section>
-    <div class="stats">
-        <div class="stat">
-            <div class="stat-num">50+</div>
-            <div class="stat-label">Restaurants</div>
-        </div>
-    <div class="stat">
-        <div class="stat-num">200+</div>
-        <div class="stat-label">Plats</div>
-    </div>
-    <div class="stat">
-        <div class="stat-num">1K+</div>
-        <div class="stat-label">Clients</div>
-        </div>
-    </div>
-    <div class="search-section">
-    <div class="search-bar">
-        <span>🔍</span>
-        <input type="text"placeholder="Rechercher un plat ou un restaurants...">
-        <button class="btn-fill">Go</button>
-    </div>
-</div>
-<section class="restaurants">
 
- <div class="section-header">
-        <h2>Catégories</h2>
- </div> 
- <div class="cats">
-    <div class="cat active">
-                <div class="cat-icon">🍽️</div>
-                <div class="cat-label">Tous</div>
-    </div>
-    <div class="cat">
-        <div class="cat-icon">🍚</div>
-        <div class="cat-label">Trad.</div>
-    </div>
-    <div class="cat">
-        <div class="cat-icon">🍔</div>
-        <div class="cat-label">Burger</div>
-    </div>
-    <div class="cat">
-        <div class="cat-icon">🐟</div>
-        <div class="cat-label">Poisson</div>
-    </div>
-    <div class="cat">
-        <div class="cat-icon">🍕</div>
-        <div class="cat-label">Pizza</div>
-    </div>
- </div>
-     <div class="section-header">
-            <h2>Populaires</h2>
-            <a href="restaurants.html">Voir tout </a>
-        </div>
-        <div class="rest-grid">
-            <div class="rest-card">
-                <div class="rest-img">
-                    🍛
-                    <div class="rest-rating">✩ 4.9</div>
-                     </div>
-                     <div class="info">
-                    <h3>Le Baobab</h3>
-                    <p>Cuisine sénégalaise traditionnelle</p>
-                    <div class="rest-foot">
-                        <span> ⏱️25-35 min</span>
-                        <a href="menu.html" class="btn-fill">Commander</a>
+    <main>
+
+        <!-- Hero -->
+        <section class="hero-section home-hero">
+
+            <div class="container hero-grid">
+
+                <div class="hero-text">
+
+                    <span class="badge">🇸🇳 Livraison à Dakar</span>
+
+                    <h1>
+                        Commandez vos
+                        <span>plats favoris</span>
+                        en ligne
+                    </h1>
+
+                    <p>
+                        Découvrez les meilleurs restaurants de Dakar.
+                        Rapide, simple et délicieux.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="restaurants.html" class="btn-fill">
+                            🍽️ Commander
+                        </a>
+
+                        <a href="restaurants.html" class="btn-outline">
+                            Voir les restos
+                        </a>
                     </div>
+
                 </div>
+
+                <div class="hero-preview">
+                        <small>Livraison</small>
+                    </div>
+
                 </div>
-        <div class="rest-card">
-            <div class="rest-img">
-                🍔
-                <div class="rest-rating">✩ 4.5</div>
-                </div>
-            <div class="rest-info">
-                <h3>Dakar burger</h3>
-                <p>🍔 Fast-food. Burgers & Frites</p>
-                <div class="rest-foot">
-                    <span> ⏱️15-25 min</span>
-                    <a href="menu.html" class="btn-fill">Commander</a>
-                </div>
+
             </div>
+
+        </section>
+
+        <!-- Statistiques -->
+
+        <section class="stats-row">
+
+            <div class="container stats-grid">
+
+                <div>
+                    <strong>50+</strong>
+                    <span>Restaurants</span>
+                </div>
+
+                <div>
+                    <strong>200+</strong>
+                    <span>Plats</span>
+                </div>
+
+                <div>
+                    <strong>1000+</strong>
+                    <span>Clients</span>
+                </div>
+
             </div>
-         </div> 
-         </div>
+
+        </section>
+
+        <!-- Recherche -->
+
+        <section class="container home-content">
+
+            <div class="search-box home-search">
+
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    id="homeSearch"
+                    placeholder="Rechercher un plat ou un restaurant..."
+                >
+
+                <button class="btn-fill" id="homeSearchBtn">
+                    Go
+                </button>
+
+            </div>
+
+            <!-- Catégories -->
+
+            <div class="section-head">
+
+                <div>
+
+                    <h2 class="section-title">
+                        Catégories
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Choisissez selon vos envies
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="cat-row home-cats">
+
+                <button class="cat-card active" data-cat="tous">
+                    🍽️ Tous
+                </button>
+
+                <button class="cat-card" data-cat="traditionnel">
+                    🍚 Traditionnel
+                </button>
+
+                <button class="cat-card" data-cat="fast-food">
+                    🍔 Burger
+                </button>
+
+                <button class="cat-card" data-cat="poisson">
+                    🐟 Poisson
+                </button>
+
+                <button class="cat-card" data-cat="pizza">
+                    🍕 Pizza
+                </button>
+
+            </div>
+
+            <!-- Restaurants populaires -->
+
+            <div class="section-head popular-head">
+
+                <div>
+
+                    <h2 class="section-title">
+                        Populaires
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Les restaurants les plus demandés
+                    </p>
+
+                </div>
+
+                <a href="restaurants.html" class="section-link">
+                    Voir tout →
+                </a>
+
+            </div>
+
+            <div class="grid-2" id="popularList">
+
+                <!-- Restaurant 1 -->
+
+                <article class="food-card restaurant-card">
+
+                    <div class="food-img bg-baobab">
+                        🍛
+                        <span class="rating">⭐ 4.9</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3 class="card-title">
+                            Le Baobab
+                        </h3>
+
+                        <p class="card-text">
+                            Cuisine sénégalaise traditionnelle
+                        </p>
+
+                        <div class="card-foot">
+
+                            <span>⏱ 25 - 35 min</span>
+
+                            <a href="menu.html?restaurant=1" class="btn-fill">
+                                Commander
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+                <!-- Restaurant 2 -->
+
+                <article class="food-card restaurant-card">
+
+                    <div class="food-img bg-burger">
+                        🍔
+                        <span class="rating">⭐ 4.5</span>
+                    </div>
+
+                    <div class="card-body">
+
+                        <h3 class="card-title">
+                            Dakar Burger
+                        </h3>
+
+                        <p class="card-text">
+                            Fast-food • Burgers & Frites
+                        </p>
+
+                        <div class="card-foot">
+
+                            <span>⏱ 15 - 25 min</span>
+
+                            <a href="menu.html?restaurant=2" class="btn-fill">
+                                Commander
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+
     <footer class="footer">
-        <p>Copyright 2026 Food Express - Tous droits réservés</p>
+        Copyright © 2026 Food Express - Tous droits réservés
     </footer>
-   <script src="js/api.js"></script>
-    <script src="js/script.js" ></script>
+
+    <script src="js/api.js"></script>
+    <script src="js/dieyla.js"></script>
+
 </body>
 </html>
+
+        
+                
