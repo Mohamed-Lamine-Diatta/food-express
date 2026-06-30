@@ -1,7 +1,11 @@
-// Fichier pour la connexion avec le backend Node/Express
-// Attendu sur http://localhost:3000
+// Petit fichier pour parler avec le backend Node/Express
+// Backend attendu sur http://localhost:3000
 
-const API_URL = 'http://localhost:3000/api';
+// En local avec Live Server/file, utiliser localhost.
+// En ligne sur Render, utiliser le même domaine que le site.
+const API_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:'
+  ? 'http://localhost:3000/api'
+  : `${window.location.origin}/api`;
 
 function getToken() {
   return localStorage.getItem('token');
@@ -55,7 +59,7 @@ async function request(path, options = {}) {
   return data;
 }
 
-// l'authentification
+// ---------------- AUTH ----------------
 
 async function register(nom, email, password, telephone = '', adresse = '') {
   const data = await request('/auth/register', {
@@ -88,7 +92,7 @@ async function me() {
   return request('/auth/me');
 }
 
-// les restaus
+// ---------------- RESTAURANTS ----------------
 
 async function getRestaurants(params = {}) {
   const query = new URLSearchParams(params).toString();
@@ -119,7 +123,7 @@ async function deleteRestaurant(id) {
   });
 }
 
-// Pour les plats
+// ---------------- PLATS ----------------
 
 async function getPlats(params = {}) {
   const query = new URLSearchParams(params).toString();
@@ -150,7 +154,7 @@ async function deletePlat(id) {
   });
 }
 
-// Pour le panier
+// ---------------- PANIER ----------------
 
 function getPanier() {
   const panier = localStorage.getItem('panier');
@@ -207,7 +211,7 @@ function getTotalPanier() {
   return getPanier().reduce((total, item) => total + item.prix * item.quantite, 0);
 }
 
-//Pour les commandes
+// ---------------- COMMANDES ----------------
 
 async function createCommande(infos = {}) {
   const panier = getPanier();
@@ -239,7 +243,7 @@ async function getCommande(id) {
   return request(`/commandes/${id}`);
 }
 
-// Pour l'admin
+// ---------------- ADMIN ----------------
 
 async function getDashboard() {
   return request('/admin/dashboard');
