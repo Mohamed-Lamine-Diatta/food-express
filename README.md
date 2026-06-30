@@ -77,9 +77,6 @@ food-express/
 │   ├── middleware/
 │   └── routes/
 │
-├── GUIDE_EXECUTION.md
-├── GUIDE_POSTMAN.md
-├── GUIDE_POSTMAN.html
 └── README.md
 ```
 
