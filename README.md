@@ -4,7 +4,7 @@ Le projet contient aussi une partie administrateur pour gérer les restaurants, 
 
 ## Objectif du projet
 
-L’objectif est de créer une petite plateforme de commande de nourriture, un peu comme une version simple de Jumia Food ou Uber Eats, adaptée au contexte local.
+L’objectif est de créer une petite plateforme de commande de nourriture adaptée au contexte local.
 
 L’utilisateur peut :
 
