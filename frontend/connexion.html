@@ -1,183 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
-</head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width; initial-scale1.0">
-     <title>food FoodExpress - restaurants</title>
-     <link rel="stylesheet" href="css/variable.css">
-     <link rel="stylesheet" href="css/style.css">
-
-     <style>
-
-    body{
-        background: #000;
-        color: white;
-        font-family: ariaal, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
-
-
-    button{
-        background-color: orange;
-        color: black;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointers;
-    }
-
-    .container{
-        width: 400px;
-        margin: 50px auto;
-    }
-
-    .logo{
-        width: 60px;
-        height: 60px;
-        background-color: orange;
-        border-radius: 15px;
-        margin-bottom: 15px;
-    }
-
-    h1, h2,p label{
-        color: white;
-
-    }
-
-    input{
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
-        border: 1px solid #333;
-        border-radius: 10px;
-        background-color: #111;
-        color: white;
-
-    }
-
-    .connexion-btn{
-        background-color: orange;
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 10px;
-    
-    }
-
-    .se-connecter{
-        background-color: orangered;
-        color: white;
-        border: none;
-        width: 100%;
-        padding: 15px;
-        border-radius: 10px;
-        font-size: 18px;
-        font-weight: bold;
-    }
-
-    .forgot-paaseword{
-        color: orangered;
-        text-decoration: none;
-
-    }
-
-    .signup a{
-        color: orangered;
-        font-weight: bold;
-        text-decoration: none;
-    
-    }
-
-    .social-btn{
-        background-color: #111;
-        color: white;
-        border: 1px solid #333;
-        padding: 12px;
-        border-radius: 10px;
-        width: 48%;
-        cursor: pointer;
-    }
-
-    .inscription-btn{
-        background-color: #111;
-        color: white;
-        border: 1px solid #333;
-        padding: 12px 20px;
-        border-radius: 10px;
-    }
-
-    button:hover,
-    .social-btn{
-        opacity: 0.9;
-    }
-
-
-
-    
-</style>
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Express - Connexion</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/demba.css">
 </head>
 <body>
-        <div class="logo-icon"></div>
-        <h2>FoodExpress
-        </div>
-       <h1>Bon retour !👋</h1>
-       <p class="subtitle">
-        connecter vous pour passer votre commande
-    </p>
-    <div class="tabs">
-        <button class="active">connexion</button>
-        <button>inscription</button>
-    </div>
-
-</form>
-
-    <label>adresse email</label>
-     <input type="email" placeholder="votre@email.com">
-
-     <label>mot de passe</label>
-     <input type="password" placeholder="*******">
-
-     <div class="forgot">
-        <a href="mot de passe oublie">
-            mot de passe oublie
-        </a>
-     </div>
-
-     <button class="login-btn">
-        se connecter
-    </button>
-    
-</form>
-<div class="separator">
-    ou continuer avec
-    </div>
-<div class="social">
-    <button>🌐 google</button>
-    <button>📘 Facebook</button>
-</div>
-
-</div class="social">
-     pas encore de compte ?
-     <a href="#">s'inscrire</a>
-</div>
-
-</div>
-
+  <nav class="navbar"><div class="container nav-inner"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a><ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="restaurants.html">Restaurants</a></li></ul><div class="nav-actions"><a class="btn-outline" href="restaurants.html">Voir les restos</a></div></div></nav>
+  <main class="page auth-page">
+    <section class="container auth-wrap">
+      <div class="auth-info">
+        <span class="badge">👋 Bienvenue</span>
+        <h1>Connectez-vous pour commander facilement.</h1>
+        <p>Gardez votre panier, suivez vos commandes et retrouvez vos restaurants favoris.</p>
+      </div>
+      <div class="panel form-card auth-card">
+        <div class="auth-tabs"><button class="active" data-tab="login">Connexion</button><button data-tab="register">Inscription</button></div>
+        <form id="loginForm" class="auth-form">
+          <div class="form-group"><label>Email</label><input class="form-control" name="email" type="email" value="fatou@email.com" required></div>
+          <div class="form-group"><label>Mot de passe</label><input class="form-control" name="password" type="password" value="client123" required></div>
+          <button class="btn-fill full" type="submit">Se connecter →</button>
+          <p class="form-msg" id="loginMsg"></p>
+        </form>
+        <form id="registerForm" class="auth-form hidden">
+          <div class="form-group"><label>Nom complet</label><input class="form-control" name="nom" placeholder="Votre nom" required></div>
+          <div class="form-group"><label>Email</label><input class="form-control" name="email" type="email" placeholder="votre@email.com" required></div>
+          <div class="form-group"><label>Téléphone</label><input class="form-control" name="telephone" placeholder="77 000 00 00"></div>
+          <div class="form-group"><label>Adresse</label><input class="form-control" name="adresse" placeholder="Dakar"></div>
+          <div class="form-group"><label>Mot de passe</label><input class="form-control" name="password" type="password" placeholder="minimum 6 caractères" required></div>
+          <button class="btn-fill full" type="submit">Créer mon compte →</button>
+          <p class="form-msg" id="registerMsg"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/demba.js"></script>
 </body>
 </html>
-
-
-
-
-
-       
-
- 
-
-
-
-
-    
-

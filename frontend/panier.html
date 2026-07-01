@@ -1,291 +1,36 @@
 <!DOCTYPE html>
-<html lang="FR">
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale1.0">
-
-<style>
-
-body{
-    background: #0A0A0A;
-    color: white;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-
-.container{
-    max-width: 420px;
-    margin: auto;
-}
-
-h1{
-    margin-bottom: 5px;
-}
-
-.subtitle{
-    color: #888;
-    margin-bottom: 25px;
-}
-.steps{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-}
-
-.step{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-.circle{
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.done .circle{
-    background: #22c55e;
-}
-
-.active .circle{
-    background: #ff7a2f;
-}
-
-.pending .circle{
-    background: #222;
-    color: #999;
-}
-
-.done{
-    color: #22c55e;
-}
-
-.active{
-    color: #ff7a2f;
-}
-
-.pending{
-    color: #777;
-}
-
-.cart-item{
-    background: #111;
-    border-radius: 18px;
-    padding: 15px;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.left{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.image{
-    width: 55px;
-    height: 55px;
-    background: #1d1d1d;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-}
-
-.name{
-    font-size: 20px;
-    font-weight: bold;
-}
-.price{
-    color: #ff7a2f;
-    font-weight: bold;
-}
-
-.qty{
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.qty button{
-    width: 35px;
-    height: 35px;
-    background: #1f1f1f;
-    border: none;
-    border-radius: 8px;
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-}
-.summary{
-    background: #111;
-    border-radius: 18px;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-.row{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0;
-    color: #888;
-}
-
-.total{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.total-price{
-    color: #ff7a2f;
-    font-size: 30px;
-}
-.confirm{
-    width: 100%;
-    padding: 18px;
-    margin-top: 20px;
-    border: none;
-    border-radius: 15px;
-    background: #ff7a2f;
-    color: white;
-    font-size: 22px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(255,122,47,0.4);
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Express - Panier</title>
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/demba.css">
 </head>
-
 <body>
-<div class="container">
-<h1>🛒 Mon Panier</h1>
-<p class="subtitle">
-verifier votre commande avant de valider
-</p>
-
-<div class="steps">
-
-<div class="step done">
-<div class="circle">✔</div>
-MENU
-</div>
-
-<div class="step active">
-<div class="circle">2</div>
-Panier
-</div>
-
-<div class="step pending">
-<div class="circle">3</div>
-confirmation
-</div>
-
-</div>
-
-<div class="cart-item">
-
-<div class="left">
-<div class="image">🍛</div>
-
-<div>
-<div class="name">thieboudienne</div>
-<div class="price">2 500 FCFA</div>
-</div>
-
-</div>
-
-<div class="qty">
-<button>-</button>
-<span>1</span>
-<button>+</button>
-</div>
-
-</div>
-
-<div class="cart-item">
-
-<div class="left">
-
-<div class="image">🍗</div>
-
-<div>
-<div class="name">yassa poulet</div>
-<div class="price">4 000 FCFA</div>
-</div>
-
-</div>
-
-<div class="qty">
-<button>-</button>
-<span>2</span>
-<button>+</button>
-</div>
-
-</div>
-
-<div class="cart-item">
-
-<div class="left">
-
-<div class="image">🥤</div>
-
-<div>
-<div class="name">Bissap frais</div>
-<div class="price">500 FCFA</div>
-</div>
-
-</div>
-
-<div class="qty">
-<button>-</button>
-<span>1</span>
-<button>+</button>
-</div>
-
-</div>
-
-
-<div class="summary">
-
-<div class="row">
-<span>sous-total</span>
-<span>7 000 FCFA</span>
-</div>
-
-<div class="row">
-<span>frais de service</span>
-<span>200 FCFA</span>
-</div>
-
-<hr style="border:1px solid #222;">
-
-<div class="total">
-<span>total</span>
-<span class="total-price">7 200 FCFA</span>
-</div>
-
-</div>
-<button class="confirm">
-✔CONFIRMER LA commande
-</button>
-
-</div>
-
+  <nav class="navbar"><div class="container nav-inner"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a><ul class="nav-links"><li><a href="restaurants.html">Restaurants</a></li><li><a class="active" href="panier.html">Panier</a></li><li><a href="historique.html">Commandes</a></li></ul><div class="nav-actions"><a href="menu.html" class="btn-outline">Ajouter des plats</a></div></div></nav>
+  <main class="page">
+    <section class="hero-section cart-hero"><div class="container"><span class="badge">🛒 Étape 2/3</span><h1>Mon Panier</h1><p>Vérifiez votre commande avant de confirmer.</p></div></section>
+    <section class="container cart-layout">
+      <div class="panel cart-list">
+        <div class="cart-steps"><span class="done">✓ Menu</span><span class="active">2 Panier</span><span>3 Confirmation</span></div>
+        <div id="cartItems"></div>
+        <div class="empty" id="cartEmpty" hidden>Votre panier est vide. <br><br><a class="btn-fill" href="menu.html">Voir le menu</a></div>
+      </div>
+      <aside class="panel cart-summary">
+        <h2>Résumé</h2>
+        <div class="sum-row"><span>Sous-total</span><strong id="subtotal">0 FCFA</strong></div>
+        <div class="sum-row"><span>Frais service</span><strong id="serviceFee">200 FCFA</strong></div>
+        <div class="sum-row total"><span>Total</span><strong id="cartTotal">0 FCFA</strong></div>
+        <div class="form-group"><label>Adresse livraison</label><input id="deliveryAddress" class="form-control" placeholder="Ex: Point E, Dakar"></div>
+        <div class="form-group"><label>Téléphone</label><input id="deliveryPhone" class="form-control" placeholder="77 000 00 00"></div>
+        <button id="confirmOrder" class="btn-fill full">✅ Confirmer la commande</button>
+        <p class="form-msg" id="cartMsg"></p>
+      </aside>
+    </section>
+  </main>
+  <script src="js/api.js"></script>
+  <script src="js/demba.js"></script>
 </body>
 </html>
-
-
