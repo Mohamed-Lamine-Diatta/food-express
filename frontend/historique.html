@@ -1,39 +1,20 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Express - Historique</title>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Express - Historique</title>
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/koulibaly.css">
 </head>
 <body>
-
-<div class="container">
-
-    <div class="header">
-        <h1>📋 Mes Commandes</h1>
-        <p>Suivez l'état de vos commandes en temps réel</p>
-    </div>
-
-    <div class="filters">
-        <button class="active">Toutes</button>
-        <button>✅ Livrées</button>
-        <button>🔄 En cours</button>
-        <button>⏳ En attente</button>
-    </div>
-
-    <!-- Aucune commande affichée -->
-    <div id="orders-container">
-        <div class="empty-state">
-            <div class="empty-icon">📦</div>
-            <h2>Aucune commande</h2>
-            <p>Vos commandes apparaîtront ici.</p>
-        </div>
-    </div>
-
-</div>
-
-<script src="script.js"></script>
+  <nav class="navbar"><div class="container nav-inner"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a><ul class="nav-links"><li><a href="index.html">Accueil</a></li><li><a href="restaurants.html">Restaurants</a></li><li><a class="active" href="historique.html">Commandes</a></li></ul><div class="nav-actions"><a href="panier.html" class="btn-fill">🛒 Panier</a></div></div></nav>
+  <main class="page">
+    <section class="hero-section hist-hero"><div class="container"><span class="badge">📋 Suivi</span><h1>Mes Commandes</h1><p>Suivez l'état de vos commandes en temps réel.</p></div></section>
+    <section class="container hist-content">
+      <div class="pills hist-filters"><button class="pill active" data-status="all">Toutes</button><button class="pill" data-status="livree">✅ Livrées</button><button class="pill" data-status="en_preparation">🔄 En cours</button><button class="pill" data-status="en_attente">⏳ En attente</button></div>
+      <div id="ordersList"></div>
+      <div class="empty" id="ordersEmpty" hidden>Aucune commande trouvée.</div>
+    </section>
+  </main>
+  <script src="js/api.js"></script><script src="js/koulibaly.js"></script>
 </body>
 </html>

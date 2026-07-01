@@ -62,3 +62,73 @@
 
 
 
+/* Historique */
+.hist-hero { 
+  padding: 42px 0 30px; 
+}
+.hist-hero h1 { 
+  font-size: clamp(32px, 5vw, 50px); 
+  margin: 12px 0 6px; 
+}
+.hist-hero p { 
+  color: var(--gray); 
+}
+.hist-content { 
+  padding: 24px 0 55px; 
+}
+.hist-filters { 
+  margin-bottom: 18px; 
+}
+.order-card { 
+  padding: 16px; 
+  margin-bottom: 14px; 
+}
+.order-top, .order-foot { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 12px; 
+}
+.order-num { 
+  font-size: 17px; 
+  font-weight: 900; 
+}
+.order-date { 
+  color: var(--gray); 
+  font-size: 12px; 
+  margin-top: 3px; 
+}
+.order-items { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 7px; 
+  margin: 14px 0; 
+}
+.order-item { 
+  background: var(--dark-4); 
+  color: #ddd; 
+  border: 1px solid var(--border); 
+  border-radius: 9px; 
+  padding: 6px 10px; 
+  font-size: 12px; 
+}
+.order-foot { 
+  border-top: 1px solid var(--border); 
+  padding-top: 12px; 
+}
+.order-resto { 
+  color: var(--gray); 
+  font-size: 13px; 
+}
+.order-total { 
+  color: var(--orange); 
+  font-weight: 900; 
+}
+
+
+@media (max-width: 700px) { 
+  .order-top, .order-foot { 
+    align-items: flex-start; 
+    flex-direction: column; 
+  } 
+}
