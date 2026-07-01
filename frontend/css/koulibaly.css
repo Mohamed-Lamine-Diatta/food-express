@@ -1,0 +1,64 @@
+/* Confirmation */
+.confirm-page { 
+  background: radial-gradient(circle at center top, rgba(26,138,74,.18), transparent 35%), var(--dark); 
+}
+.confirm-wrap { 
+  min-height: calc(100vh - 76px); 
+  display: grid; 
+  place-items: center; 
+  padding: 40px 0; 
+}
+.confirm-card { 
+  padding: 34px; 
+  max-width: 560px; 
+  text-align: center; 
+}
+.success-icon { 
+  width: 82px; 
+  height: 82px; 
+  border-radius: 50%; 
+  background: rgba(26,138,74,.17); 
+  border: 1px solid rgba(26,138,74,.35); 
+  display: grid; 
+  place-items: center; 
+  margin: 0 auto 18px; 
+  font-size: 42px; 
+}
+.confirm-card h1 { 
+  font-size: clamp(30px, 5vw, 44px); 
+  margin-bottom: 8px; 
+}
+.confirm-card p { 
+  color: var(--gray); 
+  line-height: 1.7; 
+}
+.confirm-details { 
+  margin: 20px 0; 
+  background: #101010; 
+  border: 1px solid var(--border); 
+  border-radius: 14px; 
+  padding: 14px; 
+  text-align: left; 
+}
+.detail-row { 
+  display: flex; 
+  justify-content: space-between; 
+  padding: 8px 0; 
+  border-bottom: 1px solid var(--border); 
+  color: var(--gray); 
+}
+.detail-row:last-child { 
+  border-bottom: 0; 
+}
+.detail-row strong { 
+  color: white; 
+}
+.confirm-actions { 
+  display: flex; 
+  gap: 10px; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+}
+
+
+

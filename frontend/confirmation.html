@@ -1,33 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Express - Confirmation</title>
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Food Express - Confirmation</title>
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/koulibaly.css">
 </head>
 <body>
-    <div class="confirmation-card">
-    <div class="icon">✅</div>
-
-    <h1>Commande Confirmée</h1>
-
-    <p class="message">
-        Merci pour votre commande. Elle a été enregistrée avec succès.
-    </p>
-
-    <div class="details">
-        <p><strong>N° Commande :</strong> <span id="numero">En cours de chargement...</span></p>
-<p><strong>Temps estimé :</strong> <span id="temps">En cours de chargement...</span></p>
-    </div>
-
-    <button id="btnHistorique">
-        Voir mes commandes
-    </button>
-
-</div>
-
-<script src="js/confirmation.js"></script>
+  <nav class="navbar"><div class="container nav-inner"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a><ul class="nav-links"><li><a href="restaurants.html">Restaurants</a></li><li><a href="historique.html">Commandes</a></li></ul><div class="nav-actions"><a href="index.html" class="btn-outline">Accueil</a></div></div></nav>
+  <main class="page confirm-page">
+    <section class="container confirm-wrap">
+      <div class="panel confirm-card">
+        <div class="success-icon">✅</div>
+        <h1>Commande confirmée !</h1>
+        <p>Votre commande a bien été enregistrée. Vous pouvez suivre son état dans votre historique.</p>
+        <div id="confirmDetails" class="confirm-details"></div>
+        <div class="confirm-actions"><a href="historique.html" class="btn-fill">Voir mes commandes</a><a href="restaurants.html" class="btn-outline">Commander encore</a></div>
+      </div>
+    </section>
+  </main>
+  <script src="js/api.js"></script><script src="js/koulibaly.js"></script>
 </body>
 </html>
