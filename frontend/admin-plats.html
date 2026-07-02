@@ -1,85 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestion plats - FoodExpress</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Plats</title>
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/mdione.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="flex min-h-screen">
-        <!-- sidebar identique -->
-         <aside class="w-64 bg-gray-800 p-5">
-            <h1 class="text-2xl font-bold mb-8"> FoodExpress</h1>
-            <nav class="space-y-3">
-                <a href="dashboard.html" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-700">
-                    <i class="fas fa-utensils"></i> Plats
-                </a>
-            </nav>
-         </aside>
-         <!-- Main content -->
-          <main class="flex-1 p-8">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">Gestion des plats</h2>
-                <button class="bg-orange-500 px-6 py-3 rounded-lg font-semibold hover: bg-orange-600">
-                    + Ajouter un plat
-                </button>
-            </div>
-            <!-- Filtres -->
-             <div class="flex gap4 mb-6">
-                <input type="text" placeholder="recher un plat..."
-                class="bg-gray-800 px-4 py-2 rounded-lg flex-1 focus:outline-none focus:ring-2 focus:ring-orange-500">
-                <select class="bg-gray-800 px-4 py-2 rounded-lg">
-                    <option>Toutes catégories</option>
-                    <option>Plats tradictionnels</option>
-                    <option>Fast food</option>
-                    <option>Desserts</option>
-                </select>
-             </div>
-             <!-- Tableau des plats -->
-              <div class="bg-gray-800 rounded-xl overflow-hidden">
-                <table class="w-full">
-                    <thead class="bg-gray-700">
-                        <tr>
-                            <th class="text-left p-4">plats</th>
-                            <th class="text-left p-4">catégories</th>
-                            <th class="text-left p-4">Prix</th>
-                            <th class="text-left p-4">Stock</th>
-                            <th class="text-left p-4">Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="border-b border-gray-700 hover:bg-gray-750">
-                            <td class="p-4 flex items-center gap-3">
-                                <img src="https://via.placeholder.com/50" class="rounded-lg" alt="plat">
-                                Thieboudienne
-                            </td>
-                            <td class="p-4">Plat tradictionnels</td>
-                            <td class="p-4">2500 FCFA</td>
-                            <td class="p-4"><span class="bg-green-500 px-2 py-1 rounded text-sm">En stock</span></td>
-                            <td class="p-4 flex gap-2">
-                                <button class="text-blue-400 hover:text-blue-300"><i class="fas fa-edit"></i></button>
-                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                        <tr class="border-b border-gray-700 hover:bg-gray-750">
-                            <td class="p-4 flex items-center gap-3">
-                                <img src="https://via.placeholder.com/50" class="rounded-lg" alt="plat">
-                                Mafé
-                            </td>
-                            <td class="p-4">Plat tradictionnels</td>
-                            <td class="p-4">3000 FCFA</td>
-                            <td class="p-4"><span class="bg-red-500 px-2 py-1 rounded text-sm">Rupture</span></td>
-                            <td class="p-4 flex gap-2">
-                                <button class="text-blue-400 hover:text-blue-300"><i class="fas fa-edit"></i></button>
-                                <button class="text-red-400 hover:text-red-300"><i class="fas fa-trash"></i></button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-              </div>
-          </main>
-    </div>
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar"><div class="admin-logo"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a></div><nav class="admin-nav"><a href="admin-dashboard.html">📊 Dashboard</a><a href="admin-commandes.html">📋 Commandes</a><a class="active" href="admin-plats.html">🍽️ Plats</a><a href="restaurants.html">🏪 Restaurants</a></nav></aside>
+    <main class="admin-main"><div class="admin-top"><div><h1>Gestion des Plats</h1><p class="section-subtitle">Ajouter, modifier ou supprimer les plats</p></div><button class="btn-fill" id="showDishForm">+ Ajouter un plat</button></div>
+      <form class="panel dish-form" id="dishForm" hidden><div class="form-grid"><input class="form-control" name="nom" placeholder="Nom du plat" required><input class="form-control" name="prix" type="number" placeholder="Prix" required><select class="form-control" name="categorie"><option>Plats</option><option>Entrées</option><option>Boissons</option><option>Desserts</option></select><input class="form-control" name="emoji" placeholder="Emoji" value="🍽️"></div><textarea class="form-control" name="description" placeholder="Description"></textarea><button class="btn-fill" type="submit">Enregistrer</button></form>
+      <div class="admin-toolbar"><div class="search-box"><span>🔍</span><input id="dishSearch" placeholder="Rechercher un plat..."></div><div class="pills dish-filters"><button class="pill active" data-cat="tous">Tous</button><button class="pill" data-cat="plats">Plats</button><button class="pill" data-cat="boissons">Boissons</button><button class="pill" data-cat="desserts">Desserts</button></div></div>
+      <div class="panel table-wrap"><table class="data-table"><thead><tr><th>Plat</th><th>Prix</th><th>Catégorie</th><th>Restaurant</th><th>Dispo</th><th>Actions</th></tr></thead><tbody id="dishesBody"></tbody></table></div>
+    </main>
+  </div>
+  <script src="js/api.js"></script><script src="js/mdione.js"></script>
 </body>
 </html>

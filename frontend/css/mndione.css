@@ -1,0 +1,20 @@
+/* F4 - Admin Dashboard + Admin Plats */
+.stat-box { padding: 18px; }
+.stat-box span { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: #1a0800; font-size: 24px; margin-bottom: 12px; }
+.stat-box strong { display: block; font-size: 30px; color: white; }
+.stat-box small { color: var(--gray); }
+.admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+.dash-card { padding: 18px; }
+.dash-card h2 { font-size: 17px; margin-bottom: 14px; }
+.mini-list p, .recent-item { display: flex; justify-content: space-between; gap: 10px; padding: 11px 0; border-bottom: 1px solid var(--border); color: var(--gray); }
+.mini-list p:last-child, .recent-item:last-child { border-bottom: 0; }
+.mini-list strong, .recent-item strong { color: white; display: block; }
+.mini-list span { color: var(--orange); font-size: 12px; }
+.admin-toolbar { display: grid; grid-template-columns: 1fr auto; gap: 14px; margin-bottom: 16px; align-items: center; }
+.dish-form { padding: 16px; margin-bottom: 16px; display: grid; gap: 12px; }
+.form-grid { display: grid; grid-template-columns: 1fr 130px 150px 100px; gap: 10px; }
+.dish-cell { display: flex; align-items: center; gap: 10px; }
+.dish-cell span { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: var(--dark-4); font-size: 20px; }
+.action-btn { border: 1px solid #333; background: #1a1a1a; color: white; border-radius: 8px; padding: 7px 9px; margin-right: 4px; }
+.action-btn.delete { color: var(--red); border-color: rgba(231,76,60,.35); background: rgba(231,76,60,.10); }
+@media (max-width: 1000px) { .admin-grid, .admin-toolbar, .form-grid { grid-template-columns: 1fr; } }

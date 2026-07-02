@@ -1,175 +1,18 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Food Express - Commande</title>
-
-<style>
-
-body{
-
-background:#0B0B0B;
-
-font-family:Arial,sans-serif;
-
-color:white;
-
-padding:20px;
-
-}
-
-.container{
-
-background:#161616;
-
-padding:25px;
-
-border-radius:25px;
-
-max-width:600px;
-
-margin:auto;
-
-}
-
-h1{
-
-text-align:center;
-
-margin-bottom:20px;
-
-color:#FF7A1A;
-
-}
-
-label{
-
-display:block;
-
-margin-top:15px;
-
-margin-bottom:5px;
-
-}
-
-input,
-
-textarea,
-
-select{
-
-width:100%;
-
-padding:15px;
-
-background:#222;
-
-border:none;
-
-border-radius:12px;
-
-color:white;
-
-}
-
-textarea{
-
-resize:none;
-
-}
-
-button{
-
-width:100%;
-
-padding:15px;
-
-margin-top:25px;
-
-background:#FF7A1A;
-
-border:none;
-
-border-radius:15px;
-
-color:white;
-
-font-size:18px;
-
-font-weight:bold;
-
-cursor:pointer;
-
-}
-
-button:hover{
-
-background:#ff8c33;
-
-}
-
-</style>
-
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Commandes</title>
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/msow.css">
 </head>
-
 <body>
-
-<div class="container">
-
-<h1>Food Express</h1>
-
-<label>Nom complet</label>
-
-<input type="text">
-
-<label>Téléphone</label>
-
-<input type="tel">
-
-<label>Adresse de livraison</label>
-
-<textarea rows="3"></textarea>
-
-<label>Plat commandé</label>
-
-<select>
-
-<option>Thiéboudienne</option>
-
-<option>Yassa Poulet</option>
-
-<option>Bissap Frais</option>
-
-<option>Thiakry</option>
-
-</select>
-
-<label>Quantité</label>
-
-<input type="number" value="1">
-
-<label>Mode de paiement</label>
-
-<select>
-
-<option>Paiement à la livraison</option>
-
-<option>Wave</option>
-
-<option>Orange Money</option>
-
-</select>
-
-<button>Valider la commande</button>
-
-</div>
-
+  <div class="admin-layout">
+    <aside class="admin-sidebar"><div class="admin-logo"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a></div><nav class="admin-nav"><a href="admin-dashboard.html">📊 Dashboard</a><a class="active" href="admin-commandes.html">📋 Commandes</a><a href="admin-plats.html">🍽️ Plats</a><a href="restaurants.html">🏪 Restaurants</a></nav></aside>
+    <main class="admin-main"><div class="admin-top"><div><h1>Gestion des Commandes</h1><p class="section-subtitle">Suivre et changer l'état des commandes</p></div><a class="btn-outline" href="index.html">Retour site</a></div>
+      <div class="pills admin-order-filters"><button class="pill active" data-status="all">Toutes</button><button class="pill" data-status="en_attente">En attente</button><button class="pill" data-status="en_preparation">En préparation</button><button class="pill" data-status="pret">Prêtes</button></div>
+      <div class="panel table-wrap"><table class="data-table"><thead><tr><th>N°</th><th>Client</th><th>Restaurant</th><th>Total</th><th>Statut</th><th>Action</th></tr></thead><tbody id="adminOrdersBody"></tbody></table></div>
+    </main>
+  </div>
+  <script src="js/api.js"></script><script src="js/msow.js"></script>
 </body>
-
 </html>
