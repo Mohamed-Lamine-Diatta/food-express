@@ -1,91 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - FoodExpress</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/lids/font_awesome/6.4.0/css/all.min.css">
-
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Dashboard</title>
+  <link rel="stylesheet" href="css/variables.css"><link rel="stylesheet" href="css/base.css"><link rel="stylesheet" href="css/mndione.css">
 </head>
-<body class="bg-gray-900 text-white">
-    <div class="flex min-h-screen">
-        <!--sidebar-->
-        <aside class="w-64 bg-gray-800 p-5">
-           <h1 class="text-2*1 font-bold mb-8"> FoodExpress </h1>
-           <nav class="space-y-3">
-            <a href="#" class="flex items-centr gap-3 bg-orange-500 p-3 rounded-lg">
-                <i class="fas fa-chart-line"></i> Dashboard
-                </a>
-                <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-700">
-                    <i class="fas fa-utensils"></i> Plats
-                </a>
-                <a href="#" class="flex items-center gap-3 p-3;rounded-lg hover:bg-gray-700">
-                    <i class="fas fa-users"></i> Clients
-                </a>
-                <a href="#" class="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-700">
-                    <i class="fas fa-shopping-bag"></i>Commandes
-                </a>
-           </nav>
-        </aside>
-        <!--Main Content -->
-        <main class="flex-1 p-8">
-            <h2 class="text-3xl font-bold mb-6">Dashboard</h2>
-            <!-- Stats Cards -->
-             <div class="grid grid-cols-4 gap-5 mb-8">
-                <div class="bg-gray-800 p-5 rounded-xl">
-                    <p class="text-gray-400 text-sm">Total Commandes</p>
-                    <p class="text-3xl font-bold mt-2">1248</p>
-                    <p class="text-green-400 text-sm mt-1"> 12% ce mois</p>
-                </div>
-                <div class="bg-gray-800 p-5 rounded-xl">
-                    <p class="text-gray-400 text-sm">Chiffre d'affaires</p>
-                    <p class="text-3xl font-bold mt-2">5240000 FCFA</p>
-                    <p class="text-green-400 text-sm mt-1"> 8% ce mois</p>
-                </div>
-                <div class="bg-gray-800 p-5 rounded-xl">
-                    <p class="text-gray-400 text-sm">Clients actifs</p>
-                    <p class="text-3xl font-bold mt-2">892</p>
-                    <p class="text-green-400 text-sm mt-1"> 15% ce mois</p>
-                </div>
-                <div class="bg-gray-800 p-5 rounded-xl">
-                    <p class="text-gray-400 text-sm">Plats vendus</p>
-                    <p class="text-3xl font-bold mt-2">3421</p>
-                    <p class="text-green-400 text-sm mt-1"> 10% ce mois</p>
-             </div>  
-             </div>
-                <!--Commandes récentes -->
-                <div class="bg-gray-800 rounded-xl p-6">
-                    <h3 class="text-xl font-bold mb-4">Commandes récentes</h3>
-                    <table class="w-full">
-                        <thead>
-                            <tr class="text-gray-400 text-left border-b border-gray-700">
-                                <th class="pb-3">ID</th>
-                                <th class="pb-3">Clients</th>
-                                <th class="pb-3">Plat</th>
-                                <th class="pb-3">Montant</th>
-                                <th class="pb-3">Statut</th>
-                            </tr>
-                        </thead>
-                        <tbody class="space-y-3">
-                            <tr class="border-b border-gray-700">
-                                <td class="py-3">#1248</td>
-                                <td class="py-3">Maimouna Ndione</td>
-                                <td class="py-3">Thieboudienne</td>
-                                <td class="py-3">2500 FCFA</td>
-                                <td class="py-3"><span class="bg-green-500 px-3 py-1 rounded-full text-sm">Livré</span></td>
-                              </tr>
-                              <tr class="border-b border-gray-700">
-                                <td class="py-3">#1247</td>
-                                <td class="py-3">Moussa Ndione</td>
-                                <td class="py-3">yassa poulet</td>
-                                <td class="py-3">3000 FCFA</td>
-                                <td class="p-3"><span class="bg-yellow-500 px-3 py-1 rounded-full text-sm">En cours</span></td>
-                              </tr>
-                        </tbody>
-                    </table>
-                </div>
-        </main>
-    </div>
-</body>   
+<body>
+  <div class="admin-layout">
+    <aside class="admin-sidebar"><div class="admin-logo"><a href="index.html" class="logo"><span class="logo-icon">🍽️</span><span class="logo-name">Food Express</span></a></div><nav class="admin-nav"><a class="active" href="admin-dashboard.html">📊 Dashboard</a><a href="admin-commandes.html">📋 Commandes</a><a href="admin-plats.html">🍽️ Plats</a><a href="restaurants.html">🏪 Restaurants</a></nav></aside>
+    <main class="admin-main"><div class="admin-top"><div><h1>Tableau de bord</h1><p class="section-subtitle">Bienvenue Administrateur 👋</p></div><a class="btn-fill" href="admin-plats.html">+ Ajouter un plat</a></div>
+      <section class="stats-admin grid-4"><div class="panel stat-box"><span>📦</span><strong id="statOrders">24</strong><small>Commandes</small></div><div class="panel stat-box"><span>👥</span><strong id="statUsers">128</strong><small>Utilisateurs</small></div><div class="panel stat-box"><span>🏪</span><strong id="statRestaurants">8</strong><small>Restaurants</small></div><div class="panel stat-box"><span>💰</span><strong id="statRevenue">58K</strong><small>FCFA</small></div></section>
+      <section class="admin-grid"><div class="panel dash-card"><h2>📋 Commandes récentes</h2><div id="recentOrders"></div></div><div class="panel dash-card"><h2>👥 Derniers utilisateurs</h2><div class="mini-list"><p><strong>Fatou Sow</strong><span>Client</span></p><p><strong>Ousmane Ba</strong><span>Client</span></p><p><strong>Ibrahima Fall</strong><span>Client</span></p></div></div></section>
+    </main>
+  </div>
+  <script src="js/api.js"></script><script src="js/mndione.js"></script>
+</body>
 </html>
