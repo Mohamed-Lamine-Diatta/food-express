@@ -21,9 +21,9 @@
 
   function restaurantCard(r) {
     const cat = normalize(r.categorie);
-    const name = normalize(${r.nom} ${r.description} ${r.categorie});
+    const name = normalize(`${r.nom} ${r.description} ${r.categorie}`);
     const bg = r.image_bg || 'linear-gradient(135deg,#2A1500,#1A0800)';
-    return 
+    return `
       <article class="food-card restaurant-card" data-cat="${cat}" data-name="${name}">
         <div class="food-img" style="background:${bg}">${r.emoji || '🍽️'}<span class="rating">⭐ ${r.note || '4.5'}</span></div>
         <div class="card-body">
@@ -31,7 +31,7 @@
           <p class="card-text">${escapeHtml(r.description || r.categorie || '')}</p>
           <div class="card-foot"><span>⏱ ${escapeHtml(r.temps_livraison || '25-35 min')}</span><a class="btn-fill" href="menu.html?restaurant=${r.id}">Voir</a></div>
         </div>
-      </article>;
+      </article>`;
   }
 
   function filterCards(cards, cat, search, emptyEl) {
@@ -84,7 +84,7 @@
   document.getElementById('homeSearch')?.addEventListener('input', refreshHome);
   document.getElementById('homeSearchBtn')?.addEventListener('click', () => {
     const q = encodeURIComponent(document.getElementById('homeSearch').value.trim());
-    window.location.href = q ? restaurants.html?q=${q} : 'restaurants.html';
+    window.location.href = q ? `restaurants.html?q=${q}` : 'restaurants.html';
   });
 
   document.querySelectorAll('#restaurantFilters .pill').forEach(btn => btn.addEventListener('click', () => {

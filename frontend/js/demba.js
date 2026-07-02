@@ -1,6 +1,6 @@
 // F2 - Connexion + Panier connectés au backend
 (function () {
-  const fmt = n => ${Number(n || 0).toLocaleString('fr-FR')} FCFA;
+  const fmt = n => `${Number(n || 0).toLocaleString('fr-FR')} FCFA`;
   const params = new URLSearchParams(window.location.search);
   const nextPage = params.get('next');
 
@@ -20,7 +20,7 @@
   function showMsg(el, text, ok) {
     if (!el) return;
     el.textContent = text;
-    el.className = form-msg ${ok ? 'ok' : 'err'};
+    el.className = `form-msg ${ok ? 'ok' : 'err'}`;
   }
 
   function redirectAfterLogin(user) {
@@ -78,7 +78,7 @@
     cart.forEach(item => {
       const div = document.createElement('div');
       div.className = 'cart-item';
-      div.innerHTML = <div class="cart-emoji">${item.emoji || '🍽️'}</div><div><div class="cart-name">${item.nom}</div><div class="cart-price">${fmt(item.prix)} x ${item.quantite}</div></div><div class="qty"><button data-id="${item.id}" data-action="minus">−</button><strong>${item.quantite}</strong><button data-id="${item.id}" data-action="plus">+</button></div>;
+      div.innerHTML = `<div class="cart-emoji">${item.emoji || '🍽️'}</div><div><div class="cart-name">${item.nom}</div><div class="cart-price">${fmt(item.prix)} x ${item.quantite}</div></div><div class="qty"><button data-id="${item.id}" data-action="minus">−</button><strong>${item.quantite}</strong><button data-id="${item.id}" data-action="plus">+</button></div>`;
       cartItems.appendChild(div);
     });
 
@@ -122,7 +122,7 @@
       localStorage.setItem('lastOrder', JSON.stringify(data.commande || data));
       window.location.href = 'confirmation.html';
     } catch (err) {
-      showMsg(msg, ${err.message || 'Commande impossible'}. Vérifiez votre connexion., false);
+      showMsg(msg, `${err.message || 'Commande impossible'}. Vérifiez votre connexion.`, false);
     }
   });
 
